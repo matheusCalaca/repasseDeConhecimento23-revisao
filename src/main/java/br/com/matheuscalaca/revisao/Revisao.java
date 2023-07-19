@@ -11,17 +11,14 @@ public class Revisao {
     public String saudacao(@PathVariable("nome") String nome){
         String saudacao = "Olá, ";
         saudacao = saudacao + nome;
-
         return saudacao;
     }
 
     @GetMapping("maiorQue18/{idade}")
     public String maiorQue18(@PathVariable("idade") int idadeDaPessoa){
-
         if(idadeDaPessoa >= 18){
             return "pode Dirigir";
         } else {
-
             return "Não porde Dirigir";
         }
 
@@ -52,7 +49,6 @@ public class Revisao {
                         jaFoiAdicionado = true;
                     }
                 }
-
             }else {
                 for (int i = 0; i < numerosImpares.length; i++){
                     if(numerosImpares[i] == null && !jaFoiAdicionado){
